@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <div style="border: 1px solid black;height: 250px;width:400px ;margin-left: 500px;">
+          <div style="display: flex;">
+            <p>  1st Number :</p>
+            <label style="margin-top: 15px;"  id="num1">
+                <input type="number" id="display" >
+            </label>
+        </div>
+        <div  style="display: flex;">
+            <p>  2st Number :</p>
+            <label style="margin-top: 15px;" id="num2">
+                <input type="tel" id="display"  >
+            </label>
+        </div>
+        <div style="margin-left: 15px;">
+            <button onclick="calculate('multiply')">Multipy</button>
+            <button onclick="calculate('divide')">Divide</button>
+        </div>
+         <p id="result" >The Result is: </p>
+       
+
+       </div>
+     
+         <script type="text/javascript">
+        function calculate(operation) {
+            var num1 = parseFloat(document.getElementById(' 1st Number').value);
+            var num2 = parseFloat(document.getElementById(' 2st Number').value);
+            var result;
+            
+            if (operation === 'multiply') {
+                result = num1 * num2;
+            } else if (operation === 'divide') {
+                result = num1 / num2;
+            }
+            
+            document.getElementById('result').innerText = "The Result Is: " + result;
+        }
+   
+       </script>
+</body>
+</html>
